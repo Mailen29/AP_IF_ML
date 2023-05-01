@@ -1,0 +1,106 @@
+  
+  <!-- proyectos -->
+  <div class="container-md mw-75 shadow-lg bg-body rounded" style="
+  padding-left: 0px;
+  padding-right: 00px;
+  ">
+    <!-- div card header -->
+    <div class="card-header">
+      <!-- div card header d-flex -->
+      <div class="d-flex justify-content-between align-items-center">
+        <h5 class="card-title" style="
+      margin-bottom: 0px;
+      ">
+          Proyectos</h5>
+        <button type="button" class="btn btn-link btn-rounded">
+          <i class="bi bi-plus-circle"></i>
+        </button>
+      </div>
+      <!-- div card header d-flex -->
+    </div>
+    <!-- div card header -->
+    <!-- div card body 1 -->
+    <div class="card-body">
+      <!-- div row -->
+      <div class="row">
+        <!-- space -->
+        <div class="col-1">
+        </div>
+        <!-- space -->
+        <!-- text -->
+        <div class="col-11">
+          <!-- div subtitle -->
+          <div class="d-flex justify-content-between align-items-center">
+            <a href="#">
+              <h5 class="card-title">Eiusmod proident</h5>
+            </a>
+            <div>
+              <button type="button" class="btn btn-link btn-rounded">
+                <i class="bi bi-pencil-square" data-bs-toggle="modal" data-bs-target="#editModal"></i>
+              </button>
+              <!-- Modal -->
+              <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="editModalLabel">Editar información</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="titleInput" class="form-label">Título</label>
+                          <input type="text" class="form-control" id="titleInput">
+                        </div>
+                        <div class="mb-3">
+                          <label for="descriptionInput" class="form-label">Descripción</label>
+                          <textarea class="form-control" id="descriptionInput" rows="3"></textarea>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                      <button type="button" class="btn btn-primary" id="saveChangesBtn">Guardar cambios</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <button type="button" class="btn btn-link btn-rounded">
+                <i class="bi bi-trash" data-bs-toggle="modal" data-bs-target="#deleteModal"></i>
+              </button>
+              <!-- Modal -->
+              <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="deleteModalLabel">¿Está seguro de eliminar?</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>¿Está seguro de que desea eliminar este elemento?</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                      <button type="button" class="btn btn-danger" id="deleteBtn">Eliminar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- div subtitle -->
+          <p class="card-text">Reprehenderit sunt nulla dolore est aliqua voluptate sit ad. Mollit officia eiusmod qui
+            esse duis labore veniam incididunt sunt sint consequat sint.</p>
+          <p class="card-text"><small class="text-muted">Elit non laborum mollit.</small></p>
+        </div>
+        <!-- text -->
+      </div>
+      <!-- div row -->
+    </div>
+    <!-- div card body 1 -->
+  </div>
+  <!-- proyectos -->
+  
+  
