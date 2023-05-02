@@ -9,7 +9,7 @@ import { BotonesComponent } from './componentes/botones/botones.component';
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { BarraComponent } from './componentes/barra/barra.component';
-import { ProyectoComponent } from './componentes/proyecto/proyecto.component';
+import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 
 @NgModule({
@@ -21,7 +21,7 @@ import { FooterComponent } from './componentes/footer/footer.component';
     ExperienciaComponent,
     EducacionComponent,
     BarraComponent,
-    ProyectoComponent,
+    ProyectosComponent,
     FooterComponent
   ],
   imports: [
