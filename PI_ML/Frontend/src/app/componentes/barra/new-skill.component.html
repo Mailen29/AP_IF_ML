@@ -1,0 +1,31 @@
+<div class="modal fade" id="newskillModal" tabindex="-1" aria-labelledby="newskillModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Cabecera del modal -->
+            <div class="modal-header">
+                <h4 class="modal-title">Añadir Skill</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <!-- Cuerpo del modal -->
+            <div class="modal-body">
+                <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre de la Empresa</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre"
+                            required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="descripcionE" class="form-label">Descripción de la Tarea:</label>
+                        <input class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="porcentaje"
+                            required rows="3">
+                    </div>
+                    <!-- Pie del modal -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Guardar cambios</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

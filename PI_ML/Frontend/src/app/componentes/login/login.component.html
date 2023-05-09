@@ -1,0 +1,39 @@
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <!-- modal body and footer here -->
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">Iniciar sesión</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div ng class="modal-body col-10 mx-auto">
+                        <!-- login form -->
+                        <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+                            <div class="mb-3">
+                                <label for="nombreUsuario" class="form-label fs-6 m-1">Correo electrónico</label>
+                                <input type="email" class="form-control" id="nombreUsuario" name="nombreUsuario"
+                                    aria-describedby="emailHelp" [(ngModel)]="nombreUsuario" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label fs-6 m-1">Contraseña</label>
+                                <input type="password" class="form-control" id="password" name="password"
+                                    [(ngModel)]="password" required />
+                                <div id="passwordlHelp" class="form-text">
+                                    We'll never share your password with anyone else.
+                                </div>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                                <label class="form-check-label" for="exampleCheck1">Recordar nombre de usuario</label>
+                            </div>
+                                <button class="btn btn-outline-light btn-lg px-5" type="submit" data-bs-dismiss ="modal">Login</button>
+                        </form>
+                    </div>
+                    <!-- login form -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

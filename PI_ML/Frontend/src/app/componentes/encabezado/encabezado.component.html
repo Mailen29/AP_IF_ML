@@ -8,14 +8,12 @@
           <img src="/../../assets/Logo - Argentina Programa - black.png" height="75" alt="AP Logo" loading="lazy"
             style="margin-top: -1px;" />
         </a>
-  
         <!-- Toggle button -->
         <button class="navbar-toggler btn-outline-primary" type="button" data-bs-toggle="collapse"
           data-bs-target="#navbarButtonsExample" aria-controls="navbarButtonsExample" aria-expanded="false"
           aria-label="Toggle navigation">
           <i class="bi bi-justify"></i>
         </button>
-  
         <!-- Collapsible wrapper -->
         <div class="collapse navbar-collapse" id="navbarButtonsExample">
           <!-- Left links -->
@@ -29,13 +27,13 @@
             </li>
           </ul>
           <!-- Left links -->
-  
           <div class="d-flex align-items-center">
             <a class="btn btn-dark px-3 me-2" href="" role="button"><i class="bi bi-git"></i></a>
             <button type="button" class="btn btn-outline-primary px-3 me-2" data-bs-toggle="modal"
-              data-bs-target="#exampleModal">
+              data-bs-target="#loginModal" (click)="login()" *ngIf="!isLogged">
               Acceder
             </button>
+            <button *ngIf="isLogged" type="button" class="btn btn-danger" (click)="onLogOut()">Cerrar sesión</button>
           </div>
         </div>
         <!-- Collapsible wrapper -->
@@ -43,47 +41,4 @@
       <!-- Container wrapper -->
     </nav>
     <!-- Navbar -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <!-- modal header -->
-          <div class="modal-header bg-dark">
-            <h5 class="modal-title text-light" id="exampleModalLabel">
-              Inicia Sesión
-            </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-              <i class="bi bi-x-lg text-light"></i>
-            </button>
-          </div>
-          <!-- modal header -->
-          <!-- modal body -->
-          <div class="modal-body col-10 mx-auto">
-            <!-- login form -->
-            <form>
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label fs-6 m-1">Correo electrónico</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-              </div>
-              <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label fs-6 m-1">Contraseña</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" />
-                <div id="emailHelp" class="form-text">
-                  We'll never share your password with anyone else.
-                </div>
-              </div>
-              <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                <label class="form-check-label" for="exampleCheck1">Recordar nombre de usuario</label>
-              </div>
-              <div class="d-grid gap-2 col-6 mx-auto">
-                <button type="submit" class="btn btn-primary">
-                  Submit
-                </button>
-              </div>
-            </form>
-            <!-- login form -->
-          </div>
-        </div>
-      </div>
-    </div>
   </header>

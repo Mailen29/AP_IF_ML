@@ -1,0 +1,40 @@
+<div class="modal fade" id="editperfilModal" tabindex="-1" aria-labelledby="editperfilModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Cabecera del modal -->
+            <div class="modal-header" *ngIf="persona">
+                <h4 class="modal-title">Editar información</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <!-- Cuerpo del modal -->
+            <div class="modal-body">
+                <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre de la Empresa</label>
+                        <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="persona.nombre"
+                            required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="apellido" class="form-label">Descripción de la Tarea:</label>
+                        <input class="form-control" id="apellido" name="apellido" [(ngModel)]="persona.apellido"
+                            required rows="3">
+                    </div>
+                    <div class="mb-3">
+                        <label for="descripcion" class="form-label">Descripción de la Tarea:</label>
+                        <input class="form-control" id="descripcion" name="descripcion"
+                            [(ngModel)]="persona.descripcion" required rows="3">
+                    </div>
+                    <div class="mb-3">
+                        <label for="img" class="form-label">Imagen:</label>
+                        <input type="file" class="form-control" id="img" name="img" [(ngModel)]="persona.img" accept = ".jpg, .jpeg, .png" (change)="uploadImage ($event)">
+                    </div>
+                    <!-- Pie del modal -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Guardar cambios</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

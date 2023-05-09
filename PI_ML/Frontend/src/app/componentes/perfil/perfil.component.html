@@ -15,10 +15,13 @@
       <!-- img bg -->
       <!-- img profile -->
       <div class="d-flex">
-        <a><img src="/../../assets/imagen-profile.jpg" alt="" style="width: 180px; margin-top: -7rem; margin-left: 2rem"
+        <a><img src={{persona.img}} alt="" style="width: 180px; margin-top: -7rem; margin-left: 2rem"
             class="me-auto shadow-lg mb-2 bg-body rounded-circle" />
-          <h3 class="ms-4 text-center fw-bold">Luz mailen mamani</h3>
+          <h3 class="ms-4 text-center fw-bold" id="nombre">{{persona.nombre}} {{persona.apellido}}</h3>
         </a>
+        <button type="button" class="btn btn-link btn-rounded" [attr.data-bs-toggle]="'modal'" [attr.data-bs-target]="'#editperfilModal'" [attr.data-bs-whatever]="persona.id" *ngIf="isLogged">
+          <i class="bi bi-pencil-square"></i>
+        </button>
         <!-- img profile -->
         <!-- flex row p/description-->
         <div class="d-flex flex-row" style="justify-content:center;
@@ -26,8 +29,7 @@
           <!-- name description -->
           <div class="col-9 mt-2">
             <h3>Acerca de mí</h3>
-            <p class="text-break fs-5 " style="max-width: 100%;">Ser autodidacta es, estoy convencido, el único tipo de
-              educación que existe. -Isaac Asimov</p>
+            <p class="text-break fs-5 " style="max-width: 100%;">{{persona.descripcion}}</p>
           </div>
         </div>
         <!-- name description -->
